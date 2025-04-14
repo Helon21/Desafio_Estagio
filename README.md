@@ -26,7 +26,7 @@ cd API
 4. Certifique-se de ter python 3 instalado em sua máquina e Docker. Caso não tenha, siga os passos:
 ```
 No Windows é possível instalar pela microsoft store como no exemplo abaixo:
-![Intalar python3 windows](docs/images/Python3.png)
+![Instalar python3 windows](docs/images/Python3.png)
 
 No Ubuntu, mint e debian, use o comando: sudo apt install python3
 
