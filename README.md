@@ -4,17 +4,17 @@
 
 - [Helon Xavier](https://github.com/Helon21)
 
-## Intalação
+## Instalação
 
 1. Clone este repositório:
 ```
 Via HTTPS:
   git clone https://github.com/Helon21/Desafio_Estagio.git
 
-SSH:
+Via SSH:
   git clone git@github.com:Helon21/Desafio_Estagio.git
 
-via github CLI:
+Via github CLI:
   gh repo clone Helon21/Desafio_Estagio
 ```
 
