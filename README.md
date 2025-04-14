@@ -32,7 +32,6 @@ cd API
 
 - Para baixar e instalar o docker, acesse o site: https://www.docker.com/get-started/
 
-```
 
 5. Abra o arquivo `.env-example`, renomeie para apenas `.env`, insira as informações do Banco de Dados PostgreSQL.
 ```
@@ -66,39 +65,40 @@ cd API
 ```
 
 ## Descrição do Projeto
-
+```
   Este projeto é um CRUD feito em Java 17 com Springboot usando o gerenciador de dependências Gradle, utilizando a arquitetura MVC. O software tem a função de realizar as operações de Create, Read, Update e Delete (CRUD) de uma entidade "Cliente", abaixo seguem as decrições mais detalhadas do projeto:
-
+```
 ### 1. **Entidades**
-
+```
   Este projeto conta com duas entidades, sendo a principal Customer, e a Address sendo um complemento de customer, cuja a função da address é guardar o endereço e associar ao cliente. A customer conta com informações básicas do cliente, simulando um cadastro.
-
+```
 ### 2. **DTOs**
-
+```
   Os DTOs foram criados utilizando Record, para garantir imutabilidade, permitindo apenas operações getter.
-
+```
 ### 3. **Repository, Service e Controller**
-
+```
   A camada Repository está responsável pelas operações do banco de dados
   A camada Service está com a lógica do CRUD e o método de encriptação de senha, e outros métodos auxiliares.
   A camada Controller fica responsável por aplicar a lógica da Service nos endpoints mapeados.
-
+```
 ### 4. **Utils, Exception, e migrations**
+  ```
   A pasta útils está com classes que podem ser úteis em alguma parte do projeto, como formatadores de CPF e Datas, Validações globais, entre outras que poderiam ser adicionadas futuramente mantendo a organização.
   A pasta exception guarda as exceções personalizadas e um exception handler global, assim é possível saber melhor o erro que está ocorrendo.
   a pasta db.migrations, contém os arquivos de migrações, que são como versionamentos do banco de dados, atualmente possui 2 versões, sendo elas uma criação da tabela Customer e uma da tabela Address no banco de dados.
-
+```
 ## Infraestrutura
 
 ### 5. **Docker Compose e DockerFile**
-
+```
 O DockerFile foi adicionado para que seja possivel realizar o build da imagem da JDK 17 alphine e do Gradle 7.6 evitando instalações locais.
 Já o docker compose realiza o build do docker file e inicia um banco de dados postgres. E conecta os dois contêiners através de uma network.
-
+```
 ## 6. **Script python**
-
+```
   A aplicação conta com um script em python para que o processo de inicialização do sistema, ocorra de forma mais fácil, sendo necessário apenas um comando para executar tudo.
-
+```
 ## Documentação dos Endpoints
 
 ## Customer
