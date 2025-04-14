@@ -40,21 +40,20 @@ cd API
   POSTGRES_PASSWORD=postgres
   POSTGRES_DB=postgres
   POSTGRES_PORT=5432
-
-  Caso seu banco de dados já seja configurado com outra porta, usuário e senha, apenas insira no .env, que será usado pelo docker compose
 ```
+- Caso seu banco de dados já seja configurado com outra porta, usuário e senha, apenas insira no .env, que será usado pelo docker compose
 
 6. Após instalar o python em sua máquina, raiz da pasta `Desafio_Estagio` existe um arquivo chamado `start_project.py`, ele iniciará o projeto com o seguinte comando que deve ser inserido no terminal dentro da pasta raiz:
 ```
   python3 start_project.py
+```
   Algo semelhante a isso deve aparecer no terminal: 
-```
   ![Iniciar o script](docs/images/starting_project_script.png)
-```
-  O script iniciará o docker file que está configurado com a versão 17 do java alpine, e o gradle 7.6, assim eles são iniciados em um contêiner, para que não seja necessário realizar configurações no ambiente.
 
-  Quando o processo terminar, algo semelhante a isso deve aparecer no terminal: 
-```
+- O script iniciará o docker file que está configurado com a versão 17 do java alpine, e o gradle 7.6, assim eles são iniciados em um contêiner, para que não seja necessário realizar configurações no ambiente.
+
+- Quando o processo terminar, algo semelhante a isso deve aparecer no terminal: 
+
 ![Término do script](docs/images/finish_script_execution.png)
 
 7. Agora para testar, há duas maneiras, através do Swagger ou de softwares para testar endpoints como Insomnia, ou Postman.
@@ -64,40 +63,40 @@ cd API
 ```
 
 ## Descrição do Projeto
-```
+
   Este projeto é um CRUD feito em Java 17 com Springboot usando o gerenciador de dependências Gradle, utilizando a arquitetura MVC. O software tem a função de realizar as operações de Create, Read, Update e Delete (CRUD) de uma entidade "Cliente", abaixo seguem as decrições mais detalhadas do projeto:
-```
+
 ### 1. **Entidades**
-```
+
   Este projeto conta com duas entidades, sendo a principal Customer, e a Address sendo um complemento de customer, cuja a função da address é guardar o endereço e associar ao cliente. A customer conta com informações básicas do cliente, simulando um cadastro.
-```
+
 ### 2. **DTOs**
-```
+
   Os DTOs foram criados utilizando Record, para garantir imutabilidade, permitindo apenas operações getter.
-```
+
 ### 3. **Repository, Service e Controller**
-```
+
   A camada Repository está responsável pelas operações do banco de dados
   A camada Service está com a lógica do CRUD e o método de encriptação de senha, e outros métodos auxiliares.
   A camada Controller fica responsável por aplicar a lógica da Service nos endpoints mapeados.
-```
+
 ### 4. **Utils, Exception, e migrations**
-  ```
+
   A pasta útils está com classes que podem ser úteis em alguma parte do projeto, como formatadores de CPF e Datas, Validações globais, entre outras que poderiam ser adicionadas futuramente mantendo a organização.
   A pasta exception guarda as exceções personalizadas e um exception handler global, assim é possível saber melhor o erro que está ocorrendo.
   a pasta db.migrations, contém os arquivos de migrações, que são como versionamentos do banco de dados, atualmente possui 2 versões, sendo elas uma criação da tabela Customer e uma da tabela Address no banco de dados.
-```
+
 ## Infraestrutura
 
 ### 5. **Docker Compose e DockerFile**
-```
+
 O DockerFile foi adicionado para que seja possivel realizar o build da imagem da JDK 17 alphine e do Gradle 7.6 evitando instalações locais.
 Já o docker compose realiza o build do docker file e inicia um banco de dados postgres. E conecta os dois contêiners através de uma network.
-```
+
 ## 6. **Script python**
-```
+
   A aplicação conta com um script em python para que o processo de inicialização do sistema, ocorra de forma mais fácil, sendo necessário apenas um comando para executar tudo.
-```
+
 ## Documentação dos Endpoints
 
 ## Customer
