@@ -1,0 +1,188 @@
+type: collection.insomnia.rest/5.0
+name: Customer endpoints
+meta:
+  id: wrk_a25fe32346a54ef784de6fc662df780f
+  created: 1742879266334
+  modified: 1744597671987
+collection:
+  - url: http://localhost:8080/api/v1/customer/get-all
+    name: Get All Customers
+    meta:
+      id: req_14913b5a65ef4a388fdc8209b20eee51
+      created: 1744562281709
+      modified: 1744576932781
+      isPrivate: false
+      sortKey: -1744562281709
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/v1/customer/create
+    name: Create a customer
+    meta:
+      id: req_e22017a19cff46d79a42c15fa5d6fd03
+      created: 1744567184241
+      modified: 1744590264855
+      isPrivate: false
+      sortKey: -1744567184241
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{
+
+        \t\"name\": \"Helon2\",
+
+        \t\"lastName\": \"Xavier\",
+
+        \t\"email\": \"helonbentes512@hotmail.com\",
+
+        \t\"password\": \"Helon21\",
+
+        \t\"phone\": \"(44)99974-2469\",
+
+        \t\"birthDate\": \"2001-08-29\",
+
+        \t\"cpf\": \"643.528.070-36\",
+
+        \t\"addresses\": [
+
+        \t\t{
+
+        \t\t\t\"street\": \"Rua da grã betanha\",
+
+        \t\t\t\"city\": \"Alemanha\",
+
+        \t\t\t\"state\": \"UK\",
+
+        \t\t\t\"postalCode\": \"87705-450\",
+
+        \t\t\t\"country\": \"Canadá\"
+
+        \t\t}
+
+        \t]
+
+        }
+
+        \t"
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/v1/customer/get-id/cebb9ce9-43d3-483e-a877-4ca79858cc74
+    name: Find customer by ID
+    meta:
+      id: req_f45c885ef2d64a759f33c125f9fd7625
+      created: 1744576935069
+      modified: 1744580778293
+      isPrivate: false
+      sortKey: -1744576935069
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/v1/customer/delete/8a7ab88a-e8d7-4398-912e-8b832217ae2e
+    name: Delete Customer
+    meta:
+      id: req_ea9bc77490b04c93b2864b87500d2bf8
+      created: 1744577103927
+      modified: 1744597650517
+      isPrivate: false
+      sortKey: -1744577103927
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/v1/customer/update/8a7ab88a-e8d7-4398-912e-8b832217ae2e
+    name: Update Customer
+    meta:
+      id: req_0396b59ec6424e87836fd23e1a8e468b
+      created: 1744577141805
+      modified: 1744597658498
+      isPrivate: false
+      sortKey: -1744577141805
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Helon21",
+        	"lastName": "Xavier33"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e6a106c7a3fdeb3b94a4fea502cb8d8ae571779e
+    created: 1742879266337
+    modified: 1744513716359
+  cookies:
+    - key: JSESSIONID
+      value: 186EF9E7E3448C8A9167734407E57604
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-13T03:08:36.358Z
+      lastAccessed: 2025-04-13T03:08:36.358Z
+      id: c55c7bc1-2194-448a-8aed-062693dae5f2
+environments:
+  name: Base Environment
+  meta:
+    id: env_e6a106c7a3fdeb3b94a4fea502cb8d8ae571779e
+    created: 1742879266336
+    modified: 1742879266336
+    isPrivate: false
