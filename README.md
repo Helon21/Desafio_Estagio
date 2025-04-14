@@ -47,16 +47,15 @@ cd API
 6. Após instalar o python em sua máquina, raiz da pasta `Desafio_Estagio` existe um arquivo chamado `start_project.py`, ele iniciará o projeto com o seguinte comando que deve ser inserido no terminal dentro da pasta raiz:
 ```
   python3 start_project.py
-
   Algo semelhante a isso deve aparecer no terminal: 
+```
   ![Iniciar o script](docs/images/starting_project_script.png)
-
+```
   O script iniciará o docker file que está configurado com a versão 17 do java alpine, e o gradle 7.6, assim eles são iniciados em um contêiner, para que não seja necessário realizar configurações no ambiente.
 
   Quando o processo terminar, algo semelhante a isso deve aparecer no terminal: 
-  ![Término do script](docs/images/finish_script_execution.png)
-
 ```
+![Término do script](docs/images/finish_script_execution.png)
 
 7. Agora para testar, há duas maneiras, através do Swagger ou de softwares para testar endpoints como Insomnia, ou Postman.
 ```
